@@ -26,15 +26,17 @@ public class Algebra {
 	// Returns x1 + x2
 	public static int plus(int x1, int x2) {
 		if (x2 >= 0) {
-			for (int i = 0; i < x2; i++) {
+			while (x2 > 0) {
 				x1++;
+				x2--;
 			}
 		} else {
-			for (int i = 0; i < -x2; i++) {
+			while (x2 < 0) {
 				x1--;
+				x2++;
 			}
 		}
-		return 0;
+		return x1;
 	}
 
 	// Returns x1 - x2
