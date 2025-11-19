@@ -50,7 +50,7 @@ public class Algebra {
 					x1++;
 					x2++;}}
 		
-		return 0;
+		return x1;
 	}
 
 	// Returns x1 * x2
