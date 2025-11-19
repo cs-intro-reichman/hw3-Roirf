@@ -55,9 +55,16 @@ public class Algebra {
 
 	// Returns x1 * x2
 	public static int times(int x1, int x2) {
-		for (int i = 1; i < x2; i++) {
-			x1 = plus(x1, x1);}
-		return x1;
+		int result = 0;
+		int positiveX2 = x2;
+		if (x2 < 0) {
+			positiveX2 = minus(0, x2);}
+		while (positiveX2 > 0) {
+			result = plus(result, x1);
+			positiveX2 = minus(positiveX2, 1);}
+		if (x2 < 0) {
+			result = minus(0, result);}
+		return result;
 	}
 
 	// Returns x^n (for n >= 0)
