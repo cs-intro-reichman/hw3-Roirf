@@ -55,12 +55,9 @@ public class Algebra {
 
 	// Returns x1 * x2
 	public static int times(int x1, int x2) {
-		int sum = x1;
 		for (int i = 1; i < x2; i++) {
-			sum = plus(sum, x1);
-		}
-
-		return 0;
+			x1 = plus(x1, x1);}
+		return x1;
 	}
 
 	// Returns x^n (for n >= 0)
