@@ -105,27 +105,22 @@ public class Algebra {
 
 	// Returns x1 % x2
 	public static int mod(int x1, int x2) {
-		int sum = x1;
-		if (sum < x2) {
-			return sum;}
-			else {
-				while (sum >= x2) {
-					sum = minus(sum, x2);
-					return sum;
-				}
-			}
-		return 0;
+		if (x2 == 0) {
+			return 0;}
+		int devider = div(x1, x2);
+		int product = times(devider, x2);
+		int remainder = minus(x1, product);
+		return remainder;
 	}	
 
 	// Returns the integer part of sqrt(x) 
 	public static int sqrt(int x) {
-		int original = x;
-		if (mod(original,original) ==0){
-		System.out.println(original);}
-		else {
-		if (mod(original,original) !=0){
-		original--;
-		System.out.println(original);}}
-		return 0;
-	}	  	 
+		if (x < 0) {
+			return 0;}
+		if (x == 0) {
+			return 0;}
+		int i = 1;
+		while (pow(i, 2) <= x) {
+			i++;}
+		return --i;}
 } 
