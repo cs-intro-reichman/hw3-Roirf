@@ -59,8 +59,7 @@ public class Anagram {
 			char c = str.charAt(i);
 			if (Character.isLetter(c)) {
 				processed += Character.toLowerCase(c);}
-			else if (c == ' ') {
-				processed += c;}}
+		    }
 		return processed;	
 		}
 	
